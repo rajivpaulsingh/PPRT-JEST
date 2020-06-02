@@ -4,7 +4,7 @@
   "description": "This is automation framework using Jest and Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --forceExit"
   },
   "author": "Rajiv Singh",
   "license": "ISC",
