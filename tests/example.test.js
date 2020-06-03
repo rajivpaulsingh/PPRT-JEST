@@ -1,5 +1,4 @@
 import Homepage from "../pages/HomePage";
-import { jsxEmptyExpression } from "@babel/types";
 
 describe('Example', () => {
 
