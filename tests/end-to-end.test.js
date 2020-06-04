@@ -3,7 +3,9 @@ import TopBar from "../pages/components/TopBar";
 import LoginPage from "../pages/LoginPage";
 import FeedbackPage from "../pages/FeedbackPage";
 
-describe('Example', () => {
+import { username, password, timeout } from "../config";
+
+describe('End to End Test', () => {
 
     let homePage;
     let topBar;
@@ -11,7 +13,7 @@ describe('Example', () => {
     let feedbackPage;
 
     beforeAll(async () => {
-        jest.setTimeout(30000);
+        jest.setTimeout(timeout);
         homePage = new Homepage();  
         topBar = new TopBar();
         loginPage = new LoginPage();
@@ -46,6 +48,6 @@ describe('Example', () => {
     it('Login with correct credentials', async () => {
         await loginPage.visit();
         await loginPage.isLoginFormDisplayed();
-        await loginPage.login("username", "password");
+        await loginPage.login(username, password);
     })    
 })
